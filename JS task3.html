@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>JS Task3</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<script>
+		function divisibleNumber(num) {
+			let divisibleNumberArray= []; 
+			for (let i=1; i<=num; i++) {
+				if (i % 2 === 0 && i % 3 === 0 && i % 5 === 0) {
+					divisibleNumberArray.push("yu-gi-oh");
+				}
+				else if (i % 2 === 0 && i % 3 === 0) {
+					divisibleNumberArray.push("yu-gi");
+				}
+				else if (i % 2 === 0 && i % 5 === 0) {
+					divisibleNumberArray.push("yu-oh")
+				}
+				else if (i % 3 === 0 && i % 5 === 0) {
+					divisibleNumberArray.push("gi-oh")
+				}
+				else if (i % 2 === 0) {
+					divisibleNumberArray.push("yu")
+				}
+				else if (i % 3 === 0) {
+					divisibleNumberArray.push("gi")
+				}
+				else if (i % 5 === 0) {
+					divisibleNumberArray.push("oh")
+				}
+				else {
+					divisibleNumberArray.push(i);
+
+				}
+			}
+				return divisibleNumberArray;
+			}
+		console.log(divisibleNumber(100))
+		console.log(divisibleNumber(20))
+	</script>
+</body>
